@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>5mentes</title>
+</head>
+
+<style>
+    *{
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+
+}
+
+
+.background{
+    background-color: #101010;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 45px;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.logo{
+    color: #fff;
+    font-size: 35px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    animation-name: slide;
+    animation-duration: 5s;
+}
+span{
+    color: hsl(290, 100%, 49%);
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px  25px;
+    animation-name: slide;
+    animation-duration: 5s;
+    box-shadow: #fff;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+    box-shadow: #fff;
+}
+
+nav ul li a:hover{
+    color: hsl(290, 100%, 49%);
+    transform: .10s;
+    animation-name: slide;
+    animation-duration: 1s;
+}
+
+.btn{
+    background-color: hsl(290, 100%, 49%);
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: transform .1s;
+    animation-name: slide;
+    animation-duration: 5s;
+}
+
+.btn:hover{
+    transform: scale(1.2);
+}
+
+.Main{
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    animation-name: slide;
+    animation-duration: 5s;
+    text-align: center;
+    align-items: center;
+}
+
+.Main span{
+    color: hsl(290, 100%, 49%);
+    animation-name: slide;
+    animation-duration: 5s;
+    text-align: center;
+    align-items: center;
+}
+
+h1{
+    color: #fff;
+    margin: 20px 0px 20px;
+    font-size: 75px;
+}
+
+h4{
+    color: #fcfc;
+    letter-spacing: 2px;
+    font-size: 20px;
+    animation-name: slide;
+    animation-duration: 5s;
+}
+
+h3{
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+.Container-btn form{
+    width: 380px;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+    align-items: center;
+}
+
+.Container-btn form input:first-child{
+    display: inline-block;
+    width: 100%;
+    padding: 14px 130px 14px 15px;
+    border: 2px solid hsl(290, 100%, 49%);
+    border-radius: 30px;
+    outline: none;
+    text-align: center;
+    align-items: center;
+}
+
+.Container-btn form input:last-child{
+    position: absolute;
+    display: inline-block;
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    background-color: hsl(290, 100%, 49%);
+    color: #fff;
+    box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
+    right: 6px;
+    top: 6px;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+}
+
+.background-color-Sobre{
+    background-color: #191919;
+    width: 100%;
+    padding: 100px 0px;
+}
+
+.background-color-Sobre img{
+    width: 430px;
+    height: auto;
+}
+
+.Text-sobre{
+    width: 550px;
+  }
+
+.main-sobre{
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   width: 1130px;
+   margin: 0 auto;
+}
+
+.Text-sobre h2{
+    color: #fff;
+    font-size: 75px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.Text-sobre h5{
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+
+.Text-sobre p{
+    color: #fcfc;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+button{
+    background-color: hsl(290, 100%, 49%);
+    color: #fff;
+    text-transform: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 20px;
+    border-radius: 30px;
+    transition: .4s;
+    
+}
+
+button:hover{
+    background-color: transparent;
+    border: 2px solid hsl(290, 100%, 49%);
+    cursor: pointer;
+}
+
+.Container-membros{
+    background-color: #101010;
+    width: 100%;
+    padding: 100px 0px;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+    border-radius: 40px ;
+}
+
+.title h2{
+    color: #fff;
+    font-size: 75px;
+    width: 1130px;
+    margin: 30px auto;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.Caixa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 700px;
+    flex-wrap: wrap;
+}
+
+.Card{
+    background: #191919;
+    height: 480px;
+    width: 335px;
+    border-radius: 90px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align:  center;
+}
+
+.Card i{
+    font-size: 50px;
+    display: block;
+    text-align: center;
+    margin: 25px 0px;
+    color: hsl(290, 100%, 49%);
+}
+
+h5{
+    color: #fff;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.Paragrafo-button{
+    color: #fcfc;
+    font-size: 16px;
+    line-height: 27px;
+    margin-bottom: 25px;
+}
+
+.Paragrafo-button button{
+    margin-top: 25px;
+}
+
+.me-contate {
+    width: 100%;
+    height: 290px;
+    background-color: #191919;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+}
+
+.me-contate p{
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+footer{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: #101010;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer h6{
+    font-size: 35px;
+    color: #fff;
+}
+
+footer p{
+    color: #fff;
+    font-size: 15px;
+    width: 500px;
+    text-align: center;
+    margin-top: 15px;
+    letter-spacing: 1px;
+    line-height: 23px;
+}
+
+.Redes-sociais{
+    display: flex;
+    
+}
+
+.Redes-sociais a{
+    background-color: hsl(290, 100%, 49%);
+    width: 45px;
+    height: 45px;
+    padding: 15px;
+    border-radius: 50%;
+    margin: 22px 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.Redes-sociais a:hover{
+    transform: scale(1.2);
+    transition: .3s;
+}
+
+.end{
+    position: absolute;
+    color: hsl(290, 100%, 49%);
+    bottom: 35px;
+    font-size: 14px ;
+}
+
+.background-color-Changelogs{
+    background-color: #191919;
+    width: 100%;
+    padding: 100px 0px;
+}
+
+.background-color-Changelogs img{
+    width: 430px;
+    height: auto;
+}
+
+.Text-Changelogs{
+    width: 550px;
+  }
+
+.main-Changelogs{
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   width: 1130px;
+   margin: 0 auto;
+}
+
+.Text-Changelogs h2{
+    color: #fff;
+    font-size: 75px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.Text-Changelogs h5{
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+
+.Text-Changelogs p{
+    color: #fcfc;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+@keyframes slide {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+</style>
+
+<body>
+    <!---Cabeçalho-Main-->
+
+    <div class="background">
+        <nav>
+            <h2 class="logo">5<span>mentes</span></h2><!--Logo-->
+            <ul class="cabeçalho-link">
+                <li><a href="#sobrenos">Sobre nós</a></li>
+                <li><a href="#membros">Membros</a></li>
+                <li><a href="https://github.com/5mentes", target="_blank">Projetos</a></li>
+                <li><a href="#changelogs">Changelogs</a></li>
+            </ul><!--cabeçalho-link-->
+            <a href="https://discord.gg/FfaeF8XnUY" class="btn">Discord</a>
+        </nav>
+
+        <div class="Main">
+            <h1>5<span>mentes</span></h1>
+            <h3>Somos um grupo de pessoas no discord.</h3>
+        </div><!--Main-->
+    </div><!--background-->
+
+
+    <!--Começo-da-seção-sobre-->
+
+    <section class="background-color-Sobre", id="sobrenos">
+        <div class="main-sobre">
+            <img src="https://media.discordapp.net/attachments/1046241557281521714/1046533134621102201/image.png?width=180&height=201">
+            <div class="Text-sobre">
+                <h2>Sobre-Nós</h2>
+                <h5>Desenvolvedores <span>& Pentesters</span></h5>
+                <p>Somos um grupo de amigos <span>desenvolvedores</span> e <span>pentesters</span> com intuito de desenvolver <span>softwares</span> e <span>ataques</span> contra algo que não <span>concordamos</span> como: cp, gore, lulz...</p>
+            </div><!--Text-sobre-->
+        </div><!--main-sobre-->
+    </section><!--background-color-Sobre-->
+
+    <!--Começo-da-seção-nossos-membros-->
+
+    <div class="Container-membros", id="membros">
+        <div class="title">
+            <h2>Nossos Membros</h2>
+        </div><!--title-->
+
+        <div class="Caixa">
+            <div class="Card">
+                <i class="fas fa-user"></i>
+                <img src="{{ mardok_image }}">
+                <h5></h5>
+                <h5>{{ mardok }}</h5>
+                <h5>Full-Stack Developer & Pentester</h5>
+                <div class="Paragrafo-button"> 
+                        <a href="http://discord.com/users/499456208596369438" target="_blank" rel="noopener noreferrer">
+                            <button type="button">Discord</button><!--button-->
+                        </a>
+                    </form>
+                </div><!--Paragrafo-button-->
+            </div><!--Card-->
+
+            <div class="Card">
+                <i class="fas fa-user"></i>
+                <img src="{{ hayek_image }}">
+                <h5></h5>
+                <h5>{{ hayek }}</h5>
+                <h5>Full-Stack Developer</h5>
+                <div class="Paragrafo-button">
+                    <a href="http://discord.com/users/973588723809783928" target="_blank" rel="noopener noreferrer">
+                        <button type="button">Discord</button>
+                    </a>
+                </div><!--Paragrafo-button-->
+            </div><!--Card-->
+        </div><!--Caixa-->
+        <div class="title">
+            <h2>Colaboradores</h2>
+        </div>
+
+        <div class="Caixa">
+            <div class="Card">
+                <i class="fas fa-user"></i>
+                <img src="{{ str4nx_image }}">
+                <h5></h5>
+                <h5>{{ str4nx }}</h5>
+                <div class="Paragrafo-button">
+                    <a href="http://discord.com/users/930806366212354078" target="_blank" rel="noopener noreferrer">
+                        <button type="button">Discord</button><!--button-->
+                    </a>
+                </div><!--Paragrafo-button-->
+            </div><!--Card-->
+
+            <div class="Caixa">
+                <div class="Card">
+                    <i class="fas fa-user"></i>
+                    <img src="{{ nevask_image }}">
+                    <h5></h5>
+                    <h5>{{ nevask }}</h5>
+                    <div class="Paragrafo-button">
+                        <a href="http://discord.com/users/986781168529719346" target="_blank" rel="noopener noreferrer">
+                            <button type="button">Discord</button><!--button-->
+                        </a>
+                    </div><!--Paragrafo-button-->
+                </div><!--Card-->
+        </div>
+    </div><!--Container-Membros-->
+    
+
+    <section class="background-color-Changelogs", id="changelogs">
+        <div class="main-Changelogs">
+            <div class="Text-Changelogs">
+                <h2>Changelogs</h2>
+                <p></p>
+            </div><!--Text-Changelogs-->
+        </div><!--main-Changelogs-->
+    </section><!--background-color-Changelogs-->
+
+    <!--Rodapé--->
+    <footer>
+          <h6>5mentes</h6>
+        <div class="Redes-sociais">
+            <a href="https://youtube.com/@5mentess" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/5mentes" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://discord.gg/FfaeF8XnUY" target="_blank"><i class="fab fa-discord"></i></a>
+        </div><!--Redes-sociais-->
+        <p class="end">CopyRight By 5mentes</p>
+    </footer>
+
+    
+</body>
+</html>
